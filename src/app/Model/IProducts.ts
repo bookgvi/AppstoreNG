@@ -3,4 +3,5 @@ export interface IProducts {
   title: String;
   description?: String;
   price: Number;
+  isChecked?: Boolean;
 }

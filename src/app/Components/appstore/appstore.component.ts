@@ -15,7 +15,7 @@ export class AppstoreComponent implements OnInit {
   ngOnInit() {
   }
 
-  public get getProducts() {
+  public get getProducts(): Products[] {
     return this.Products.getProducts;
   }
 }

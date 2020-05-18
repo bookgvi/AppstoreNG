@@ -5,7 +5,8 @@ export class Products implements IProducts {
     public id: Number,
     public title: String,
     public price: Number,
-    public description?: String
+    public description?: String,
+    public isChecked?: Boolean
   ) {
   }
 }
