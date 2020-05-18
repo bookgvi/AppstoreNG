@@ -14,13 +14,17 @@ export class ProductDataSourceService {
   constructor() {
   }
 
-  protected getProductsOld(): Observable<Products[]> {
+  public getProductsOld(): Observable<Products[]> {
     return from([this.products]);
   }
 
-  protected getProducts(): Observable<Products[]> {
+  public getProducts(): Observable<Products[]> {
     return new Observable<Products[]>(observer => {
       observer.next(this.products);
     })
+  }
+
+  public addProduct(product: Products): void {
+    this.products.push(product);
   }
 }

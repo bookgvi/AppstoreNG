@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  & thead {
+    border-bottom: 1px solid silver;
+  }
+  & th,td {
+    min-width: 0;
+    text-align: center;
+  }
+  & th,td:nth-child(1) {
+    width: 10%;
+  }
+  & th,td:nth-child(2) {
+    width: 20%;
+  }
+  & th,td:nth-child(3) {
+    width: 40%;
+  }
+  & th,td:nth-child(4) {
+    width: 10%;
+  }
+  & th,td:nth-child(5) {
+  }
+
+  & td:nth-child(4) {
+    text-align: right;
+    padding-right: 2px;
+  }
+  & th:nth-child(4) {
+    text-align: right;
+  }
+}

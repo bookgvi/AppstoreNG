@@ -15,4 +15,8 @@ export class ProductsRepository {
   public get getProducts(): Products[] {
     return this.products;
   }
+
+  public set addProduct(product: Products) {
+    this.dataSource.addProduct(product);
+  }
 }
