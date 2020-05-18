@@ -19,4 +19,15 @@ export class ProductsRepository {
   public set addProduct(product: Products) {
     this.dataSource.addProduct(product);
   }
+
+  public removeProduct(id: number): void {
+    this.dataSource.removeProduct(id);
+    this.recalculateIDs();
+  }
+
+  private recalculateIDs(): void {
+    this.getProducts.forEach((item, index) => {
+      this.dataSource.changeID(index, index + 1);
+    })
+  }
 }

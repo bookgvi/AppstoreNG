@@ -25,7 +25,10 @@ export class AppstoreComponent implements OnInit {
   public addProduct(): void {
     const nextID: Number = this.getProducts.length + 1;
     const newProduct: Products = new Products(nextID, this.title, this.price, this.description);
-    console.log(newProduct);
     this.Products.addProduct = newProduct;
+  }
+
+  public removeProduct(id): void {
+    this.Products.removeProduct(id);
   }
 }
