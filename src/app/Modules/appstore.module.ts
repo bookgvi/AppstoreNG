@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 import { AppstoreComponent } from '../Components/appstore/appstore.component';
-import { ModelModule } from './model.module';
+import { ProductModelModule } from './product-model.module';
 
 @NgModule({
-  imports: [BrowserModule, ModelModule, FormsModule],
+  imports: [BrowserModule, ProductModelModule, FormsModule],
   declarations: [AppstoreComponent],
   exports: [AppstoreComponent]
 })

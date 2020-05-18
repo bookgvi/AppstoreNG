@@ -14,8 +14,8 @@ export class ProductDataSourceService {
   constructor() {
   }
 
-  public getProductsOld(): Observable<Products[]> {
-    return from([this.products]);
+  public getProductsArray(): Products[] {
+    return this.products;
   }
 
   public getProducts(): Observable<Products[]> {
