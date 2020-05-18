@@ -22,12 +22,11 @@ export class ProductsRepository {
 
   public removeProduct(id: number): void {
     this.dataSource.removeProduct(id);
-    this.recalculateIDs();
+    this.recalculateIDs(id);
   }
 
-  private recalculateIDs(): void {
-    this.getProducts.forEach((item, index) => {
-      this.dataSource.changeID(index, index + 1);
-    })
+  private recalculateIDs(id: number): void {
+    for(let i = id - 1, length = this.getProducts.length; i < length; i++)
+      this.dataSource.changeID(i, i + 1);
   }
 }
