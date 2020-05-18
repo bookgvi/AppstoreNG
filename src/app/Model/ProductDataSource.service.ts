@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Products } from './Products';
 import { Observable, from } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProductDataSourceService {
   private products: Products[] = [
     new Products(1, 'Bread', 10,'HandMade'),

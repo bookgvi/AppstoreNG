@@ -1,1 +1,19 @@
-<h1>appstore works!</h1>
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Title</td>
+      <td>Description</td>
+      <td>Price</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of getProducts">
+      <td>{{ product.id }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+    </tr>
+  </tbody>
+</table>

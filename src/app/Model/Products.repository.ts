@@ -6,7 +6,7 @@ import { ProductDataSourceService } from './ProductDataSource.service';
 export class ProductsRepository {
   private products: Products[];
 
-  constructor(dataSource: ProductDataSourceService) {
+  constructor(private dataSource: ProductDataSourceService) {
     dataSource.getProducts().subscribe(data => {
       this.products = data;
     })

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsRepository } from '../../Model/Products.repository';
+import { Products } from '../../Model/Products';
 
 @Component({
   selector: 'app-appstore',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppstoreComponent implements OnInit {
 
-  constructor() { }
+  constructor(private Products: ProductsRepository) {
+  }
 
   ngOnInit() {
   }
 
+  public get getProducts() {
+    return this.Products.getProducts;
+  }
 }
