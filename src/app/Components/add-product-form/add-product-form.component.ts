@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-add-product-form',
@@ -9,6 +10,8 @@ export class AddProductFormComponent implements OnInit {
   public title: String = '';
   public description: String = '';
   public price: Number;
+  public isValidTitle: Boolean = true;
+  public isValidPrice: Boolean = true;
 
   constructor() { }
 
@@ -16,9 +19,12 @@ export class AddProductFormComponent implements OnInit {
   }
 
   @Output() hAddProduct: EventEmitter<any> = new EventEmitter()
-  public addProduct(fields) {
-    const errors = fields.reduce((acc, cur) => acc && cur.valid, true)
-    if (errors)
-      this.hAddProduct.emit({ title: this.title, price: this.price, description: this.description })
+  public addProduct(fields: Object, form: NgForm) {
+    // @ts-ignore
+    const { title, price } = fields;
+    this.isValidTitle = title.valid;
+    this.isValidPrice = price.valid;
+    if (form.valid)
+      this.hAddProduct.emit({ title: this.title, price: this.price, description: this.description });
   }
 }

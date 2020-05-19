@@ -22,7 +22,6 @@ export class AppstoreComponent implements OnInit {
   public addProduct(params: Object): void {
     // @ts-ignore
     const { title, price, description } = params;
-    console.log(title, price, description)
     const nextID: Number = this.getProducts.length + 1;
     const newProduct: Products = new Products(nextID, title, price, description);
     this.Products.addProduct = newProduct;

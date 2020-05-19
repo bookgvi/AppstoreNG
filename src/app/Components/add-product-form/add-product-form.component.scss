@@ -1,0 +1,11 @@
+input {
+  &.ng-valid.ng-dirty {
+    border: 1px solid initial;
+  }
+  &.ng-invalid.ng-dirty.ng-touched {
+    border: 2px solid #ffa5a5;
+  }
+  &.isErrors {
+    border: 2px solid #ffa5a5;
+  }
+}
