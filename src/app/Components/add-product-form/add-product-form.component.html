@@ -1,0 +1,29 @@
+<form novalidate (ngSubmit)="addProduct([titleEl, priceEl])" class="row mb-1">
+  <label>
+    <input
+      #titleEl="ngModel"
+      name="title"
+      type="text"
+      [(ngModel)]="title"
+      placeholder="Product title"
+      required
+      minlength="1"
+    >
+    {{ titleEl.dirty }}
+  </label>
+  <label>
+    <input name="description" type="text" [(ngModel)]="description" placeholder="Product description">
+  </label>
+  <label>
+    <input
+      #priceEl="ngModel"
+      name="price"
+      type="number"
+      [(ngModel)]="price"
+      placeholder="Product price"
+      required
+      minlength="1"
+    >
+  </label>
+  <button type="submit">Add</button>
+</form>

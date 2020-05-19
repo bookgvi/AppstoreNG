@@ -1,15 +1,4 @@
-<div class="row mb-1">
-  <label>
-    <input type="text" [(ngModel)]="title" placeholder="Product title">
-  </label>
-  <label>
-    <input type="text" [(ngModel)]="description" placeholder="Product description">
-  </label>
-  <label>
-    <input type="number" [(ngModel)]="price" placeholder="Product price">
-  </label>
-  <button (click)="addProduct()">Add</button>
-</div>
+<app-add-product-form (hAddProduct)="addProduct($event)"></app-add-product-form>
 <div class="row">
   <table>
     <thead>

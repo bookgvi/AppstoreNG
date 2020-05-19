@@ -8,9 +8,6 @@ import { Products } from '../../Model/Products/Products';
   styleUrls: ['./appstore.component.scss']
 })
 export class AppstoreComponent implements OnInit {
-  public title: String = '';
-  public description: String = '';
-  public price: Number;
 
   constructor(private Products: ProductsRepository) {
   }
@@ -22,9 +19,12 @@ export class AppstoreComponent implements OnInit {
     return this.Products.getProducts;
   }
 
-  public addProduct(): void {
+  public addProduct(params: Object): void {
+    // @ts-ignore
+    const { title, price, description } = params;
+    console.log(title, price, description)
     const nextID: Number = this.getProducts.length + 1;
-    const newProduct: Products = new Products(nextID, this.title, this.price, this.description);
+    const newProduct: Products = new Products(nextID, title, price, description);
     this.Products.addProduct = newProduct;
   }
 
