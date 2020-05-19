@@ -22,11 +22,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let product of getProducts">
+    <tr
+      *ngFor="let product of getProducts; let i = index; let odd = odd;"
+      [style.background] = "odd ? '#dbdbdb' : '#f1f1f1'"
+    >
       <td>
         <input type="checkbox" [(ngModel)]="product.isChecked">
       </td>
-      <td>{{ product.id }}</td>
+      <td>{{ i + 1 }}</td>
       <td>{{ product.title }}</td>
       <td>{{ product.description }}</td>
       <td>{{ product.price }}</td>

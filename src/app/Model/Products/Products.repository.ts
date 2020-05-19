@@ -22,7 +22,6 @@ export class ProductsRepository {
 
   public removeProduct(id: number): void {
     this.dataSource.removeProduct(id);
-    this.recalculateIDs(id);
   }
 
   private recalculateIDs(id: number): void {
