@@ -6,10 +6,11 @@
 >
   <label>
     <input
-      #titleEl="ngModel"
+      #titleEl="field-value"
       name="title"
       type="text"
-      [(ngModel)]="title"
+      [field-value]="title"
+      (fieldChanges)="title = $event"
       (focus)="isValidTitle = true"
       placeholder="Product title"
       required

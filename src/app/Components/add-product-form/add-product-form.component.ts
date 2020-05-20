@@ -24,7 +24,7 @@ export class AddProductFormComponent implements OnInit {
     const { title, price } = fields;
     this.isValidTitle = title.valid;
     this.isValidPrice = price.valid;
-    if (form.valid)
+    if (this.isValidTitle && this.isValidPrice)
       this.hAddProduct.emit({ title: this.title, price: this.price, description: this.description });
   }
 }

@@ -7,6 +7,7 @@ import { AppstoreComponent } from '../Components/appstore/appstore.component';
 import { AddProductFormComponent } from '../Components/add-product-form/add-product-form.component';
 
 import { PaAttrDirective } from '../Components/appstore/attr.directive';
+import { FieldValueDirective } from '../Components/add-product-form/field-value.directive';
 
 import { ProductModelModule } from './product-model.module';
 
@@ -15,12 +16,14 @@ import { ProductModelModule } from './product-model.module';
   declarations: [
     AppstoreComponent,
     AddProductFormComponent,
-    PaAttrDirective
+    PaAttrDirective,
+    FieldValueDirective
   ],
   exports: [
     AppstoreComponent,
     AddProductFormComponent,
-    PaAttrDirective
+    PaAttrDirective,
+    FieldValueDirective
   ]
 })
 export class AppstoreModule { }
