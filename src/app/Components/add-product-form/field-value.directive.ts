@@ -28,7 +28,7 @@ export class FieldValueDirective {
     }
   }
 
-  @Output('fieldChanges') change = new EventEmitter<string>();
+  @Output('field-valueChange') change = new EventEmitter<string>();
   @HostListener('input', ['$event.target'])
   updateField(el: string): void {
     this.fieldVal = el['value'];

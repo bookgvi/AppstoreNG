@@ -9,8 +9,7 @@
       #titleEl="field-value"
       name="title"
       type="text"
-      [field-value]="title"
-      (fieldChanges)="title = $event"
+      [(field-value)]="title"
       (focus)="isValidTitle = true"
       placeholder="Product title"
       required
