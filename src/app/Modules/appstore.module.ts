@@ -8,6 +8,7 @@ import { AddProductFormComponent } from '../Components/add-product-form/add-prod
 
 import { PaAttrDirective } from '../Components/appstore/attr.directive';
 import { FieldValueDirective } from '../Components/add-product-form/field-value.directive';
+import { IfFormValidDirective } from '../Components/add-product-form/if-form-valid.directive';
 
 import { ProductModelModule } from './product-model.module';
 
@@ -17,13 +18,15 @@ import { ProductModelModule } from './product-model.module';
     AppstoreComponent,
     AddProductFormComponent,
     PaAttrDirective,
-    FieldValueDirective
+    FieldValueDirective,
+    IfFormValidDirective
   ],
   exports: [
     AppstoreComponent,
     AddProductFormComponent,
     PaAttrDirective,
-    FieldValueDirective
+    FieldValueDirective,
+    IfFormValidDirective
   ]
 })
 export class AppstoreModule { }
