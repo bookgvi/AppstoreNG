@@ -1,6 +1,10 @@
 <app-add-product-form (hAddProduct)="addProduct($event)"></app-add-product-form>
+<label class="row left">
+  Set Dark cells
+  <input type="checkbox" [(ngModel)]="isDarkCell">
+</label>
 <div class="row">
-  <table>
+  <table [switch-color]="isDarkCell">
     <thead>
     <tr>
       <th></th>

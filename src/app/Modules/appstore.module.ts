@@ -9,6 +9,8 @@ import { AddProductFormComponent } from '../Components/add-product-form/add-prod
 import { PaAttrDirective } from '../Components/appstore/attr.directive';
 import { FieldValueDirective } from '../Components/add-product-form/field-value.directive';
 import { IfFormValidDirective } from '../Components/add-product-form/if-form-valid.directive';
+import { SetColorDirective } from '../Components/appstore/set-color.directive';
+import { ColorSwitcherDirective } from '../Components/appstore/color-switcher.directive';
 
 import { ProductModelModule } from './product-model.module';
 
@@ -19,14 +21,18 @@ import { ProductModelModule } from './product-model.module';
     AddProductFormComponent,
     PaAttrDirective,
     FieldValueDirective,
-    IfFormValidDirective
+    IfFormValidDirective,
+    SetColorDirective,
+    ColorSwitcherDirective
   ],
   exports: [
     AppstoreComponent,
     AddProductFormComponent,
     PaAttrDirective,
     FieldValueDirective,
-    IfFormValidDirective
+    IfFormValidDirective,
+    SetColorDirective,
+    ColorSwitcherDirective
   ]
 })
 export class AppstoreModule { }

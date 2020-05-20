@@ -8,6 +8,7 @@ import { Products } from '../../Model/Products/Products';
   styleUrls: ['./appstore.component.scss']
 })
 export class AppstoreComponent implements OnInit {
+  public isDarkCell: boolean;
 
   constructor(private Products: ProductsRepository) {
   }
