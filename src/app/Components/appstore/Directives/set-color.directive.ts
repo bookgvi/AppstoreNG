@@ -5,7 +5,7 @@ import { Directive, HostBinding } from '@angular/core';
 })
 export class SetColorDirective {
   @HostBinding('class')
-  bgClass: string;
+  bgClass: string = '';
 
   setBgColor(isSetColor: boolean): void {
     this.bgClass = isSetColor ? 'bg-dark' : '';

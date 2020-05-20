@@ -30,6 +30,7 @@
       <td>{{ product.title }}</td>
       <td>{{ product.description }}</td>
       <td>{{ product.price }}</td>
+      <td></td>
       <td>
         <button (click)="removeProduct(product.id)" [disabled]="!product.isChecked">DELETE</button>
       </td>

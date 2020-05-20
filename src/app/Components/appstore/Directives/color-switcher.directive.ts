@@ -1,4 +1,13 @@
-import { ContentChild, Directive, Input, SimpleChanges } from '@angular/core';
+import {
+  ContentChild,
+  ContentChildren,
+  Directive,
+  Input,
+  QueryList,
+  SimpleChanges,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import { SetColorDirective } from './set-color.directive';
 
 @Directive({
@@ -9,11 +18,28 @@ export class ColorSwitcherDirective {
   swColor: boolean;
 
   // @ts-ignore
+  @ContentChildren(SetColorDirective, { descendants: true })
+  cells: QueryList<SetColorDirective>;
+
+  // @ts-ignore
   @ContentChild(SetColorDirective)
-  setColor: SetColorDirective;
+  td: SetColorDirective;
 
   ngOnChanges(changes: { [props: string]: SimpleChanges }): void {
-    if (this.setColor)
-      this.setColor.setBgColor(this.swColor);
+    if (this.cells) {
+      this.setBgColor(this.swColor);
+    }
+  }
+
+  ngAfterContentInit(): void {
+    this.cells.changes.subscribe(() => {
+      setTimeout(() => this.setBgColor(this.swColor), 0);
+    })
+  }
+
+  private setBgColor(swColor: boolean): void {
+    this.cells.forEach((cell, index) => {
+      index % 2 ? cell.setBgColor(swColor) : ''
+    })
   }
 }
