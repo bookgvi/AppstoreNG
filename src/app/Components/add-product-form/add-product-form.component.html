@@ -34,7 +34,7 @@
     >
   </label>
   <button type="submit">Add</button>
-  <ng-template [is-form-valid]="titleEl['valid'] && priceEl['valid']">
-    All required fields are valid
-  </ng-template>
 </form>
+<div *is-form-valid="titleEl['valid'] && priceEl['valid']" class="is-form-valid">
+  All required fields are valid
+</div>
