@@ -1,8 +1,9 @@
 <app-add-product-form (hAddProduct)="addProduct($event)"></app-add-product-form>
-<label class="row left">
-  Set Dark cells
+<label class="row center v-center mb-1">
+  <h4 class="m-0">Set Dark cells</h4>
   <input type="checkbox" [(ngModel)]="isDarkCell">
 </label>
+
 <div class="row">
   <table [switch-color]="isDarkCell">
     <thead>
@@ -17,7 +18,7 @@
     <tbody>
     <tr
       *ngFor="let product of getProducts; let i = index; let odd = odd; let last = last;"
-      [style.background] = "odd ? '#dbdbdb' : '#f1f1f1'"
+      [style.background]="odd ? '#dbdbdb' : '#f1f1f1'"
       [pa-attr]="last"
     >
       <td>

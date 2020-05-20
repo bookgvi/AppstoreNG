@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 import { AppstoreComponent } from '../Components/appstore/appstore.component';
 import { AddProductFormComponent } from '../Components/add-product-form/add-product-form.component';
 
-import { PaAttrDirective } from '../Components/appstore/attr.directive';
-import { FieldValueDirective } from '../Components/add-product-form/field-value.directive';
-import { IfFormValidDirective } from '../Components/add-product-form/if-form-valid.directive';
-import { SetColorDirective } from '../Components/appstore/set-color.directive';
-import { ColorSwitcherDirective } from '../Components/appstore/color-switcher.directive';
+import { PaAttrDirective } from '../Components/appstore/Directives/attr.directive';
+import { FieldValueDirective } from '../Components/add-product-form/Directives/field-value.directive';
+import { IfFormValidDirective } from '../Components/add-product-form/Directives/if-form-valid.directive';
+import { SetColorDirective } from '../Components/appstore/Directives/set-color.directive';
+import { ColorSwitcherDirective } from '../Components/appstore/Directives/color-switcher.directive';
 
 import { ProductModelModule } from './product-model.module';
 
