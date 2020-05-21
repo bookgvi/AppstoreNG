@@ -9,6 +9,7 @@ import { Products } from '../../Model/Products/Products';
 })
 export class AppstoreComponent implements OnInit {
   public isDarkCell: boolean;
+  public taxRate: number = 0;
 
   constructor(private Products: ProductsRepository) {
   }

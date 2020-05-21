@@ -12,6 +12,8 @@ import { IfFormValidDirective } from '../Components/add-product-form/Directives/
 import { SetColorDirective } from '../Components/appstore/Directives/set-color.directive';
 import { ColorSwitcherDirective } from '../Components/appstore/Directives/color-switcher.directive';
 
+import { AddTaxPipe } from '../Components/appstore/Pipes/addTax.pipe';
+
 import { ProductModelModule } from './product-model.module';
 
 @NgModule({
@@ -23,7 +25,8 @@ import { ProductModelModule } from './product-model.module';
     FieldValueDirective,
     IfFormValidDirective,
     SetColorDirective,
-    ColorSwitcherDirective
+    ColorSwitcherDirective,
+    AddTaxPipe
   ],
   exports: [
     AppstoreComponent,
@@ -32,7 +35,8 @@ import { ProductModelModule } from './product-model.module';
     FieldValueDirective,
     IfFormValidDirective,
     SetColorDirective,
-    ColorSwitcherDirective
+    ColorSwitcherDirective,
+    AddTaxPipe
   ]
 })
 export class AppstoreModule { }
