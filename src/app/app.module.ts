@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppstoreModule } from './Modules/appstore.module'
 
 import { AppComponent } from './app.component';
-
-import { AppstoreModule } from './Modules/appstore.module'
 
 @NgModule({
   declarations: [AppComponent],
