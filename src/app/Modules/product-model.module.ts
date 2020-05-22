@@ -4,6 +4,9 @@ import { ProductsRepository } from '../Model/Products/Products.repository';
 import { ProductDataSourceService } from '../Model/Products/ProductDataSource.service';
 
 @NgModule({
-  providers: [ProductDataSourceService, ProductsRepository]
+  providers: [
+    { provide: ProductDataSourceService, useClass: ProductDataSourceService },
+    ProductsRepository
+  ]
 })
 export class ProductModelModule { }
